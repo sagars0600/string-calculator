@@ -41,3 +41,12 @@ test("should handle new lines between numbers", () => {
   console.log(`Test result for "1\n2,3": ${result}`);
   expect(result).toBe(6);
 });
+
+
+//test 7
+test('should support different delimiters', () => {
+    const result = add("//;\n1;2");
+    console.log(`Test result for "//;\n1;2": ${result}`);
+    expect(result).toBe(3);
+  });
+  
