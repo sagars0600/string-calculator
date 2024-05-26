@@ -17,3 +17,11 @@ test("should return the sum of two comma-separated numbers", () => {
   console.log(`Test result for "1,2": ${result}`);
   expect(result).toBe(3);
 });
+
+
+test('should return the sum of multiple comma-separated numbers', () => {
+    const result = add("1,2,3");
+    console.log(`Test result for "1,2,3": ${result}`);
+    expect(result).toBe(6);
+  });
+  
