@@ -42,11 +42,20 @@ test("should handle new lines between numbers", () => {
   expect(result).toBe(6);
 });
 
-
 //test 7
-test('should support different delimiters', () => {
-    const result = add("//;\n1;2");
-    console.log(`Test result for "//;\n1;2": ${result}`);
-    expect(result).toBe(3);
-  });
-  
+test("should support different delimiters", () => {
+  const result = add("//;\n1;2");
+  console.log(`Test result for "//;\n1;2": ${result}`);
+  expect(result).toBe(3);
+});
+
+
+//test 8
+test("should throw an exception when there are negative numbers", () => {
+  try {
+    add("1,-2,3");
+  } catch (e) {
+    console.log(`Test result for negative numbers "1,-2,3": ${e.message}`);
+    expect(e.message).toBe("negative numbers not allowed: -2");
+  }
+});
