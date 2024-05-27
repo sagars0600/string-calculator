@@ -49,7 +49,6 @@ test("should support different delimiters", () => {
   expect(result).toBe(3);
 });
 
-
 //test 8
 test("should throw an exception when there are negative numbers", () => {
   try {
@@ -58,4 +57,11 @@ test("should throw an exception when there are negative numbers", () => {
     console.log(`Test result for negative numbers "1,-2,3": ${e.message}`);
     expect(e.message).toBe("negative numbers not allowed: -2");
   }
+});
+
+//test 9
+test("should ignore numbers bigger than 1000", () => {
+  const result = add("2,1001");
+  console.log(`Test result for "2,1001": ${result}`);
+  expect(result).toBe(2);
 });
